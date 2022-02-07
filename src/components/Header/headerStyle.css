@@ -1,0 +1,5 @@
+.master__header,
+.master__header--start {
+  height: 70px;
+  display: flex;
+}
