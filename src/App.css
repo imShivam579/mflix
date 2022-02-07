@@ -170,8 +170,11 @@ p {
   font-style: var(--linkRegular-fontStyle);
   letter-spacing: var(--linkRegular-letterSpacing);
   text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-button,
+
 .btn-filled {
   padding: 8px 24px;
   border-radius: 50%;
@@ -188,6 +191,8 @@ button,
   font-style: var(--linkRegular-fontStyle);
   letter-spacing: var(--linkRegular-letterSpacing);
   text-align: center;
+  border: none;
+  outline: none;
 }
 .btn-outline {
   padding: 8px 24px;
@@ -204,6 +209,8 @@ button,
   font-style: var(--linkRegular-fontStyle);
   letter-spacing: var(--linkRegular-letterSpacing);
   text-align: center;
+  border: none;
+  outline: none;
 }
 .btn-transparent {
   padding: 8px 24px;
@@ -220,52 +227,18 @@ button,
   letter-spacing: var(--linkRegular-letterSpacing);
   text-align: center;
   background: var(--cl-white-10);
+  border: none;
+  outline: none;
 }
 /** Btn styles / Icon  */
 .btn.icon {
   padding: 8px;
+  border: none;
+  outline: none;
 }
 
 /* /----------------------------------------------------------------------------------------/ */
 
 /** Input fields Classes  */
-
-.input {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 16px;
-  width: 470px;
-  height: 40px;
-  /* Black/10 */
-
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid #323b54;
-  box-sizing: border-box;
-  border-radius: 25px;
-  /* Caption/caption */
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  /* identical to box height, or 114% */
-
-  /* Grey/700 */
-
-  color: #323b54;
-  /*icon*/
-  /* Grey/600 */
-  /* hover  */
-  /* border-color: grey500 */
-  /* Overline/small */
-
-  /* font-family: Poppins;
-font-style: normal;
-font-weight: bold;
-font-size: 12px;
-line-height: 16px; */
-}
 
 /** Btn styles / Link  */
