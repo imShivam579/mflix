@@ -1,5 +1,10 @@
 .sidebar {
   width: 300px;
-  height: calc(100vh - 70px);
+  height: 100vh;
   border: 1px solid white;
+  position: fixed;
+  top: var(--headerHeight);
+  left: 0;
+  bottom: 0;
+  z-index: 10;
 }
