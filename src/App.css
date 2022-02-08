@@ -1,6 +1,9 @@
 .App {
+  --headerHeight: 70px;
+  --sidebarWidth: 300px;
   width: 100%;
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 /** Text Classes  */
 /** Heading  */
@@ -159,86 +162,160 @@ p {
 }
 
 /* /----------------------------------------------------------------------------------------/ */
-/** Button Classes  */
-/** Btn styles / Link  */
-.btn {
-  padding: 8px 24px;
-  color: var(--cl-grey-50);
-  font-size: var(--linkRegular-fontSize);
-  font-weight: var(--linkRegular-fontWeight);
-  line-height: var(--linkRegular-lineHeight);
-  font-style: var(--linkRegular-fontStyle);
-  letter-spacing: var(--linkRegular-letterSpacing);
-  text-align: center;
+/** Button / Link Classes  */
+/** Button type - text  */
+/** style - default   */
+.btn,
+.link {
+  color: var(--cl-grey-100);
   border: none;
   outline: none;
-  cursor: pointer;
+  background-color: transparent;
 }
-
-.btn-filled {
-  padding: 8px 24px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+.btn:hover,
+.link:hover {
+  color: var(--cl-grey-50);
+}
+.btn:active,
+.link:active {
+  color: var(--cl-grey-400);
+}
+/** style - fill   */
+.btn-fill {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
   background: var(--gradient-style1-primary);
   mix-blend-mode: normal;
   color: var(--cl-grey-50);
-  font-size: var(--linkRegular-fontSize);
-  font-weight: var(--linkRegular-fontWeight);
-  line-height: var(--linkRegular-lineHeight);
-  font-style: var(--linkRegular-fontStyle);
-  letter-spacing: var(--linkRegular-letterSpacing);
-  text-align: center;
   border: none;
   outline: none;
+  border: 1px solid transparent;
 }
+.btn-fill:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    linear-gradient(90deg, #1ea5fc 0%, #1884ca 100%);
+}
+.btn-fill:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, #1ea5fc 0%, #1884ca 100%);
+  border: 1px solid var(--cl-white-30);
+}
+
+/** style - outline   */
 .btn-outline {
-  padding: 8px 24px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
   border: 1px solid var(--cl-grey-50);
   color: var(--cl-grey-50);
-  font-size: var(--linkRegular-fontSize);
-  font-weight: var(--linkRegular-fontWeight);
-  line-height: var(--linkRegular-lineHeight);
-  font-style: var(--linkRegular-fontStyle);
-  letter-spacing: var(--linkRegular-letterSpacing);
-  text-align: center;
-  border: none;
+  background-color: transparent;
   outline: none;
 }
+.btn-outline:hover {
+  background: var(--cl-white-20);
+}
+.btn-outline:active {
+  background: var(--cl-black-20);
+}
+
+/** style - transparent */
 .btn-transparent {
-  padding: 8px 24px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
   color: var(--cl-grey-50);
-  font-size: var(--linkRegular-fontSize);
-  font-weight: var(--linkRegular-fontWeight);
-  line-height: var(--linkRegular-lineHeight);
-  font-style: var(--linkRegular-fontStyle);
-  letter-spacing: var(--linkRegular-letterSpacing);
-  text-align: center;
   background: var(--cl-white-10);
   border: none;
   outline: none;
+  border: 1px solid transparent;
 }
-/** Btn styles / Icon  */
-.btn.icon {
-  padding: 8px;
-  border: none;
-  outline: none;
+.btn-transparent:hover {
+  background: var(--cl-white-20);
+}
+.btn-transparent:active {
+  background: var(--cl-black-10);
+  border: 1px solid var(--cl-white-10);
 }
 
+/** Button type - icon  */
 /* /----------------------------------------------------------------------------------------/ */
 
-/** Input fields Classes  */
-
-/** Btn styles / Link  */
+/** Input fields Classes */
+/** default styling */
+/** input type - textfield */
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: 470px;
+  background: var(--cl-black-10);
+  border: 1px solid var(--cl-grey-700);
+  height: fit-content;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+/* .input > button  */
+.input button {
+  background: none;
+  border: none;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+/* .input > input  */
+.input input {
+  flex: 1;
+  margin-right: 16px;
+  background-color: transparent;
+}
+.input input::placeholder {
+  color: #323b54;
+}
+/* .input > div.letter-count  */
+.input .letter-count {
+  font-size: var(--overlineSmall-fontSize);
+  font-weight: var(--overlineSmall-fontWeight);
+  line-height: var(--overlineSmall-lineHeight);
+  font-style: var(--overlineSmall-fontStyle);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cl-grey-500);
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+}
+/** input type - search bar */
+.input--searchbar {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.input--searchbar input {
+  margin: 0px 16px;
+}
+.f-cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

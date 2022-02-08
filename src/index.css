@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 body {
-  margin: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--cl-grey-100);
+  background-color: var(--cl-primary-900);
 }
 
 code {
@@ -17,7 +17,6 @@ code {
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --masterHeader-height: 70px;
   /** Text style  */
   /** Heading  */
   --headingh1-fontSize: 64px;
@@ -152,4 +151,38 @@ code {
   --cl-white-10: rgba(255, 255, 255, 0.1);
   /** Gradients  */
   --gradient-style1-primary: linear-gradient(90deg, #1ea5fc 0%, #1884ca 100%);
+}
+
+/** Tags Default styling  */
+
+button,
+a {
+  font-size: var(--linkRegular-fontSize);
+  font-weight: var(--linkRegular-fontWeight);
+  line-height: var(--linkRegular-lineHeight);
+  font-style: var(--linkRegular-fontStyle);
+  letter-spacing: var(--linkRegular-letterSpacing);
+  padding: 8px 24px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all ease 250ms;
+  -webkit-transition: all ease 250ms;
+  -moz-transition: all ease 250ms;
+  -ms-transition: all ease 250ms;
+  -o-transition: all ease 250ms;
+}
+button:disabled,
+a:disabled {
+  opacity: 0.51;
+  pointer-events: none;
+}
+input {
+  font-size: var(--caption-fontSize);
+  font-weight: var(--caption-fontWeight);
+  line-height: var(--caption-lineHeight);
+  font-style: var(--caption-fontStyle);
+  border: none;
+  outline: none;
+  color: var(--cl-grey-400);
 }
