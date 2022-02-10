@@ -17,15 +17,15 @@ function Header() {
     <header id="header" className="master__header bg-primary">
       <div class="master__header--wrapper">
         <div className="master__header--start">
-          <button className="btn btn__icon guide-btn f-cc headerStart-child">
+          <button className="btn btn__icon guide-btn fr-cc headerStart-child">
             {guidBtn}
           </button>
-          <div className="brand-logo headerStart-child f-cc">{brandLogo}</div>
+          <div className="brand-logo headerStart-child fr-cc">{brandLogo}</div>
         </div>
         <div className="master__header--end">
           <button
             id="btn-feedback"
-            className="btn-transparent f-cc icon-left headerEnd-child"
+            className="btn-transparent fr-cc icon-left headerEnd-child"
           >
             {edit}Feedback
           </button>

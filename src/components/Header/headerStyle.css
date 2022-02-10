@@ -8,7 +8,7 @@
   right: 0;
   z-index: 100;
   height: var(--headerHeight);
-  padding: 16px 32px 16px 16px;
+  padding: 16px var(--app-marginRight) 16px var(--app-marginLeft);
 }
 .master__header--wrapper {
   display: flex;

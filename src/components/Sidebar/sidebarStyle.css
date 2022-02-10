@@ -1,15 +1,23 @@
 .sidebar {
-  width: 300px;
+  width: 278px;
   height: 100vh;
-  border: 1px solid white;
   position: fixed;
   top: var(--headerHeight);
   left: 0;
   bottom: 0;
   z-index: 10;
 }
-
-.guid-section--entry {
+.app__guide-wrapper {
+  padding: 8px 8px 8px var(--app-marginLeft);
+}
+.app__guide-wrapper div:not(:first-child) {
+  margin-top: 24px;
+}
+.app__guide-section div:not(:first-child) {
+  margin-top: 8px;
+}
+.guid-section--entry,
+.userGuide-section--entry {
   --color: var(--cl-grey-300);
   --bodyRegular-fontWeight: 600;
   flex-direction: row;
@@ -23,10 +31,30 @@
   line-height: var(--bodyRegular-lineHeight);
   font-style: var(--bodyRegular-fontStyle);
   color: var(--color);
+  cursor: pointer;
+}
+.guid-section--entry:hover {
+  --color: var(--cl-grey-200);
 }
 .guid-section--entry.active {
   --color: var(--cl-grey-100);
   background: var(--gradient-activeTab-style2);
+}
+.guid-section--entry .icon {
+  stroke: var(--color);
+}
+.guid-section--entry.active .icon {
+  stroke: var(--color);
+}
+.guid-section--entry.active .fill-icon {
+  fill: var(--color);
+}
+.section-entry-name {
+  margin-left: 8px;
+  height: fit-content;
+}
+.fill {
+  fill: var(--cl-grey-100);
 }
 .app__guide-section {
   display: flex;

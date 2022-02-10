@@ -266,7 +266,12 @@ p {
 .btn__icon:hover .icon {
   stroke: var(--color);
 }
-
+.btn__icon.active .icon {
+  stroke: var(--color);
+}
+.btn__icon.active .fill-icon {
+  fill: var(--color);
+}
 /** Button type - icon  */
 /* /----------------------------------------------------------------------------------------/ */
 
@@ -338,7 +343,7 @@ p {
 .input--searchbar input {
   margin: 0px 16px;
 }
-.f-cc {
+.fr-cc {
   display: flex;
   align-items: center;
   justify-content: center;

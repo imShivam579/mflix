@@ -18,6 +18,8 @@ code {
 }
 :root {
   /** Text style  */
+  --app-marginLeft: 16px;
+  --app-marginRight: 35px;
   /** Heading  */
   --headingh1-fontSize: 64px;
   --headingh2-fontSize: 48px;
