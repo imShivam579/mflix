@@ -191,7 +191,7 @@ p {
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
-  background: var(--gradient-style1-primary);
+  background: var(--gradient-primary-style1);
   mix-blend-mode: normal;
   border: none;
   outline: none;
@@ -254,11 +254,14 @@ p {
 }
 
 .btn__icon {
-  padding: 8px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.btn__icon .icon {
+  stroke: var(--color);
 }
 .btn__icon:hover .icon {
   stroke: var(--color);

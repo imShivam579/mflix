@@ -17,9 +17,9 @@ function Header() {
     <header id="header" className="master__header bg-primary">
       <div class="master__header--wrapper">
         <div className="master__header--start">
-          <div className="btn btn__icon guide-btn f-cc headerStart-child">
+          <button className="btn btn__icon guide-btn f-cc headerStart-child">
             {guidBtn}
-          </div>
+          </button>
           <div className="brand-logo headerStart-child f-cc">{brandLogo}</div>
         </div>
         <div className="master__header--end">

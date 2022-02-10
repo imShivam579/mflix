@@ -145,3 +145,134 @@ export const edit = (
     />
   </svg>
 );
+export const chartBar = (
+  <svg
+    className="icon__wraper"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      className="icon"
+      d="M9 11H10C10 10.4477 9.55228 10 9 10V11ZM9 20V21C9.55228 21 10 20.5523 10 20H9ZM3 20H2C2 20.5523 2.44772 21 3 21V20ZM4 12H9V10H4V12ZM8 11V20H10V11H8ZM9 19H3V21H9V19ZM4 20V12H2V20H4ZM4 10C2.89543 10 2 10.8954 2 12H4V12V10Z"
+      fill="#8E95A9"
+    />
+    <path
+      className="icon"
+      d="M15 8V7C14.4477 7 14 7.44772 14 8H15ZM21 20V21C21.5523 21 22 20.5523 22 20H21ZM15 20H14C14 20.5523 14.4477 21 15 21V20ZM15 9H20V7H15V9ZM20 9V20H22V9H20ZM21 19H15V21H21V19ZM16 20V8H14V20H16ZM20 9H22C22 7.89543 21.1046 7 20 7V9Z"
+      fill="#8E95A9"
+    />
+    <path
+      className="icon"
+      d="M15 20V21C15.5523 21 16 20.5523 16 20H15ZM9 20H8C8 20.5523 8.44772 21 9 21V20ZM10 5H14V3H10V5ZM14 5V20H16V5H14ZM15 19H9V21H15V19ZM10 20V5H8V20H10ZM14 5H16C16 3.89543 15.1046 3 14 3V5ZM10 3C8.89543 3 8 3.89543 8 5H10V3Z"
+      fill="#8E95A9"
+    />
+  </svg>
+);
+export const compass = (
+  <svg
+    className="icon__wrapper"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      className="icon"
+      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+      stroke="#8E95A9"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      className="icon"
+      d="M16.2398 7.76L14.1198 14.12L7.75977 16.24L9.87977 9.88L16.2398 7.76Z"
+      stroke="#8E95A9"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+export const favourite = (
+  <svg
+    className="icon__wrapper"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      className="icon"
+      d="M4.45067 13.9082L11.4033 20.4395C11.6428 20.6644 11.7625 20.7769 11.9037 20.8046C11.9673 20.8171 12.0327 20.8171 12.0963 20.8046C12.2375 20.7769 12.3572 20.6644 12.5967 20.4395L19.5493 13.9082C21.5055 12.0706 21.743 9.0466 20.0978 6.92607L19.7885 6.52734C17.8203 3.99058 13.8696 4.41601 12.4867 7.31365C12.2913 7.72296 11.7087 7.72296 11.5133 7.31365C10.1304 4.41601 6.17972 3.99058 4.21154 6.52735L3.90219 6.92607C2.25695 9.0466 2.4945 12.0706 4.45067 13.9082Z"
+      stroke="#8E95A9"
+      stroke-width="2"
+    />
+  </svg>
+);
+
+export const star = (
+  <svg
+    className="icon__wrapper"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      className="icon"
+      d="M13.7299 3.51L15.4899 7.03C15.7299 7.52 16.3699 7.99 16.9099 8.08L20.0999 8.61C22.1399 8.95 22.6199 10.43 21.1499 11.89L18.6699 14.37C18.2499 14.79 18.0199 15.6 18.1499 16.18L18.8599 19.25C19.4199 21.68 18.1299 22.62 15.9799 21.35L12.9899 19.58C12.4499 19.26 11.5599 19.26 11.0099 19.58L8.01991 21.35C5.87991 22.62 4.57991 21.67 5.13991 19.25L5.84991 16.18C5.97991 15.6 5.74991 14.79 5.32991 14.37L2.84991 11.89C1.38991 10.43 1.85991 8.95 3.89991 8.61L7.08991 8.08C7.61991 7.99 8.25991 7.52 8.49991 7.03L10.2599 3.51C11.2199 1.6 12.7799 1.6 13.7299 3.51Z"
+      stroke="#8E95A9"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+export const stat = (
+  <svg
+    className="icon__wrapper"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      className="icon"
+      x="18"
+      y="7"
+      width="4"
+      height="13"
+      rx="1"
+      stroke="#8E95A9"
+      stroke-linejoin="round"
+    />
+    <rect
+      className="icon"
+      x="10"
+      y="13"
+      width="4"
+      height="7"
+      rx="1"
+      stroke="#8E95A9"
+      stroke-linejoin="round"
+    />
+    <rect
+      className="icon"
+      x="2"
+      y="9"
+      width="4"
+      height="11"
+      rx="1"
+      stroke="#8E95A9"
+      stroke-linejoin="round"
+    />
+  </svg>
+);

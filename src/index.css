@@ -150,7 +150,12 @@ code {
   --cl-white-20: rgba(255, 255, 255, 0.2);
   --cl-white-10: rgba(255, 255, 255, 0.1);
   /** Gradients  */
-  --gradient-style1-primary: linear-gradient(90deg, #1ea5fc 0%, #1884ca 100%);
+  --gradient-primary-style1: linear-gradient(90deg, #1ea5fc 0%, #1884ca 100%);
+  --gradient-activeTab-style2: linear-gradient(
+    90deg,
+    rgba(118, 126, 148, 0.58) 0%,
+    rgba(118, 126, 148, 0) 85.77%
+  );
 }
 
 /** Tags Default styling  */

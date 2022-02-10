@@ -8,3 +8,42 @@
   bottom: 0;
   z-index: 10;
 }
+
+.guid-section--entry {
+  --color: var(--cl-grey-300);
+  --bodyRegular-fontWeight: 600;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px 6px 16px;
+  border-radius: 25px 0px 0px 25px;
+  font-size: var(--bodyRegular-fontSize);
+  font-weight: var(--bodyRegular-fontWeight);
+  line-height: var(--bodyRegular-lineHeight);
+  font-style: var(--bodyRegular-fontStyle);
+  color: var(--color);
+}
+.guid-section--entry.active {
+  --color: var(--cl-grey-100);
+  background: var(--gradient-activeTab-style2);
+}
+.app__guide-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.guide-section--title {
+  --color: var(--cl-grey-600);
+  font-size: var(--overlineSmall-fontSize);
+  font-weight: var(--overlineSmall-fontWeight);
+  line-height: var(--overlineSmall-lineHeight);
+  font-style: var(--overlineSmall-fontStyle);
+  color: var(--color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 16px;
+  width: 100%;
+}

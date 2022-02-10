@@ -8,13 +8,13 @@
   right: 0;
   z-index: 100;
   height: var(--headerHeight);
-  border-bottom: 1px solid #61697f;
+  padding: 16px 32px 16px 16px;
 }
 .master__header--wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(95%, 100%);
+  width: 100%;
 }
 .master__header--start,
 .master__header--end {
@@ -27,6 +27,9 @@
 .headerStart-child:not(:first-child),
 .headerEnd-child:not(:first-child) {
   margin-left: 16px;
+}
+.guide-btn {
+  padding: 8px;
 }
 .guide-btn .icon__wrapper {
   width: 32px;
