@@ -21,22 +21,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 4px;
+  width: fit-content;
+  height: 42px;
 }
-
+.headerStart-child:not(:first-child),
+.headerEnd-child:not(:first-child) {
+  margin-left: 16px;
+}
+.guide-btn .icon__wrapper {
+  width: 32px;
+  height: 32px;
+}
 #btn-feedback {
   color: var(--cl-grey-300);
 }
-.icon-left svg {
+.icon-left .icon__wrapper {
   margin-right: 4px;
-}
-.guide-btn {
-  /* background-color: var(--cl-black-10); */
-  width: fit-content;
-  height: fit-content;
-  margin-right: 16px;
-}
-.guide-btn svg {
-  height: 40px;
-  width: 40px;
 }

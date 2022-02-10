@@ -165,23 +165,27 @@ p {
 /** Button / Link Classes  */
 /** Button type - text  */
 /** style - default   */
+
 .btn,
 .link {
-  color: var(--cl-grey-100);
+  --color: var(--cl-grey-200);
+  color: var(--color);
   border: none;
   outline: none;
   background-color: transparent;
 }
 .btn:hover,
 .link:hover {
-  color: var(--cl-grey-50);
+  --color: var(--cl-grey-100);
 }
 .btn:active,
 .link:active {
-  color: var(--cl-grey-400);
+  --color: var(--cl-grey-400);
 }
 /** style - fill   */
 .btn-fill {
+  --color: var(--cl-grey-50);
+  color: var(--color);
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -189,7 +193,6 @@ p {
   -o-border-radius: 25px;
   background: var(--gradient-style1-primary);
   mix-blend-mode: normal;
-  color: var(--cl-grey-50);
   border: none;
   outline: none;
   border: 1px solid transparent;
@@ -210,13 +213,14 @@ p {
 
 /** style - outline   */
 .btn-outline {
+  --color: var(--cl-grey-50);
+  color: var(--color);
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
-  border: 1px solid var(--cl-grey-50);
-  color: var(--cl-grey-50);
+  border: 1px solid var(--color);
   background-color: transparent;
   outline: none;
 }
@@ -229,12 +233,13 @@ p {
 
 /** style - transparent */
 .btn-transparent {
+  --color: var(--cl-grey-50);
+  color: var(--cl-grey-50);
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
-  color: var(--cl-grey-50);
   background: var(--cl-white-10);
   border: none;
   outline: none;
@@ -246,6 +251,17 @@ p {
 .btn-transparent:active {
   background: var(--cl-black-10);
   border: 1px solid var(--cl-white-10);
+}
+
+.btn__icon {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn__icon:hover .icon {
+  stroke: var(--color);
 }
 
 /** Button type - icon  */
@@ -270,6 +286,11 @@ p {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
+.input:hover,
+.input:focus {
+  border: 1px solid var(--cl-grey-500);
+}
+
 /* .input > button  */
 .input button {
   background: none;

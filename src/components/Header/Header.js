@@ -17,8 +17,10 @@ function Header() {
     <header id="header" className="master__header bg-primary">
       <div class="master__header--wrapper">
         <div className="master__header--start">
-          <div className="btn__icon guide-btn headerStart-child">{guidBtn}</div>
-          <div className="brand-logo headerStart-child">{brandLogo}</div>
+          <div className="btn btn__icon guide-btn f-cc headerStart-child">
+            {guidBtn}
+          </div>
+          <div className="brand-logo headerStart-child f-cc">{brandLogo}</div>
         </div>
         <div className="master__header--end">
           <button
@@ -28,9 +30,9 @@ function Header() {
             {edit}Feedback
           </button>
           <div className=" input input--searchbar headerEnd-child">
-            <button className="btn-right">{search}</button>
+            <button className="btn btn__icon">{search}</button>
             <input type="text" placeholder="Search Movies or TV Shows" />
-            <button className="btn-left">{cross}</button>
+            <button className="btn btn__icon">{cross}</button>
           </div>
           <button className="btn-fill headerEnd-child">Subscribe</button>
         </div>
