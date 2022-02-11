@@ -1,27 +1,31 @@
 import React, { useState } from "react";
 import "./sidebarStyle.css";
-import { stat, star, favourite, compass } from "../../customIcons/icons";
+import {
+  Stat,
+  Star,
+  Favourite,
+  Compass,
+  Trophy,
+} from "../../customIcons/icons";
 function Sidebar() {
   const [appGuideState, changeAppGuideState] = useState({
     activeTitle: "For You",
     guidSectionObject: [
-      { title: "For You", icon: favourite },
-      { title: "Explore", icon: compass },
-      { title: "Popular", icon: stat },
-      { title: "Favourite", icon: star },
+      { title: "For You", icon: Favourite, type: "appGuideState" },
+      { title: "Browse", icon: Compass, type: "appGuideState" },
+      { title: "Chart", icon: Trophy, type: "appGuideState" },
+      { title: "Popular", icon: Stat, type: "appGuideState" },
+      { title: "Favourite", icon: Star, type: "appGuideState" },
+    ],
+    userGuideSectionTitle: "My Library",
+    userGuideSectionObject: [
+      { title: "Favourite Movies", type: "userGuideState" },
+      { title: "Artists", type: "userGuideState" },
+      { title: "History", type: "userGuideState" },
+      { title: "Downloads", type: "userGuideState" },
     ],
   });
-  const [userGuideState, changeUserGuideState] = useState({
-    activeTitle: "For You",
-    sectionTitle: "My Library",
-    guidSectionObject: [
-      { title: "For You" },
-      { title: "Explore" },
-      { title: "Popular" },
-      { title: "Favourite" },
-    ],
-  });
-  function toggleClassStyle(index) {
+  function toggleAppGuideClassStyle(index) {
     if (
       appGuideState.guidSectionObject[index].title === appGuideState.activeTitle
     ) {
@@ -30,11 +34,26 @@ function Sidebar() {
       return "guid-section--entry";
     }
   }
-  const activateLink = (index) => {
-    changeAppGuideState({
-      ...appGuideState,
-      activeTitle: appGuideState.guidSectionObject[index].title,
-    });
+  function toggleUserGuideClassStyle(index) {
+    if (
+      appGuideState.userGuideSectionObject[index].title ===
+      appGuideState.activeTitle
+    ) {
+      return "userGuide-section--entry active";
+    } else {
+      return "userGuide-section--entry";
+    }
+  }
+  const activateLink = (index, type) => {
+    type === "appGuideState"
+      ? changeAppGuideState({
+          ...appGuideState,
+          activeTitle: appGuideState.guidSectionObject[index].title,
+        })
+      : changeAppGuideState({
+          ...appGuideState,
+          activeTitle: appGuideState.userGuideSectionObject[index].title,
+        });
   };
   return (
     <div id="sidebar" className="sidebar bg-primary--900">
@@ -43,9 +62,9 @@ function Sidebar() {
           {appGuideState.guidSectionObject.map((element, index) => (
             <div
               key={index}
-              className={toggleClassStyle(index)}
+              className={toggleAppGuideClassStyle(index)}
               onClick={() => {
-                activateLink(index);
+                activateLink(index, element.type);
               }}
             >
               {element.icon}
@@ -56,14 +75,14 @@ function Sidebar() {
         <div className="app__guide-scrollableSection">
           <div className="app__guide-section">
             <div className="guide-section--title">
-              {userGuideState.sectionTitle}
+              {appGuideState.userGuideSectionTitle}
             </div>
-            {userGuideState.guidSectionObject.map((element, index) => (
+            {appGuideState.userGuideSectionObject.map((element, index) => (
               <div
                 key={index}
-                className={toggleClassStyle(index)}
+                className={toggleUserGuideClassStyle(index)}
                 onClick={() => {
-                  activateLink(index);
+                  activateLink(index, element.type);
                 }}
               >
                 {element.title}

@@ -33,12 +33,16 @@
   color: var(--color);
   cursor: pointer;
 }
-.guid-section--entry:hover {
+.guid-section--entry:hover,
+.userGuide-section--entry:hover {
   --color: var(--cl-grey-200);
 }
 .guid-section--entry.active {
   --color: var(--cl-grey-100);
   background: var(--gradient-activeTab-style2);
+}
+.userGuide-section--entry.active {
+  --color: var(--cl-grey-100);
 }
 .guid-section--entry .icon {
   stroke: var(--color);
