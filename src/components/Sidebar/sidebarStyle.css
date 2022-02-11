@@ -9,6 +9,7 @@
   /* padding-right: 7px; */
   padding: 8px 8px 24px var(--app-marginLeft);
 }
+/* select all child div inside app__guide-wrapper class except first child */
 .app__guide-wrapper div:not(:first-child) {
   margin-top: 16px;
 }
@@ -20,11 +21,15 @@
   width: 100%;
   height: fit-content;
 }
+/* select all child div inside app__guide-section class except first child (overwritting inherited margin-top property from app__guide-wrapper)*/
 .app__guide-section div:not(:first-child) {
   margin-top: 4px;
 }
 #appGuidSection {
   position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 .guide-section--title {
   --color: var(--cl-grey-600);
@@ -101,4 +106,5 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-color: var(--cl-black-10);
 }

@@ -24,6 +24,14 @@
   width: fit-content;
   height: 42px;
 }
+.master__header--end {
+  width: 100%;
+  max-width: 780px;
+}
+
+.master__header--end .input {
+  flex: 1;
+}
 .headerStart-child:not(:first-child),
 .headerEnd-child:not(:first-child) {
   margin-left: 16px;
@@ -40,4 +48,9 @@
 }
 .icon-left .icon__wrapper {
   margin-right: 4px;
+}
+
+.input .icon__wrapper {
+  width: 20px;
+  height: 20px;
 }

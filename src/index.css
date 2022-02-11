@@ -166,12 +166,12 @@ code {
 
 button,
 a {
-  font-size: var(--linkRegular-fontSize);
-  font-weight: var(--linkRegular-fontWeight);
-  line-height: var(--linkRegular-lineHeight);
-  font-style: var(--linkRegular-fontStyle);
-  letter-spacing: var(--linkRegular-letterSpacing);
-  padding: 8px 24px;
+  font-size: var(--linkSmall-fontSize);
+  font-weight: var(--linkSmall-fontWeight);
+  line-height: var(--linkSmall-lineHeight);
+  font-style: var(--linkSmall-fontStyle);
+  letter-spacing: var(--linkSmall-letterSpacing);
+  padding: 4px 24px;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
