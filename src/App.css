@@ -360,3 +360,30 @@ p {
   align-items: center;
   justify-content: center;
 }
+/* /----------------------------------------------------------------------------------------/ */
+
+/** Scroll styling */
+.overflow-scroll::-webkit-scrollbar {
+  width: 6px;
+  display: none;
+}
+.overflow-scroll:hover::-webkit-scrollbar {
+  display: block;
+}
+.overflow-scroll::-webkit-scrollbar-button {
+  display: none;
+}
+.overflow-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-scroll::-webkit-scrollbar-thumb {
+  background: var(--cl-grey-700);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.overflow-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--cl-grey-500);
+}

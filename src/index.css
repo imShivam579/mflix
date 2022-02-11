@@ -75,7 +75,7 @@ code {
   --caption-fontStyle: normal;
   /** Overline  */
   --overlineRegular-fontSize: 14px;
-  --overlineSmall-fontSize: 12px;
+  --overlineSmall-fontSize: 10px;
   --overlineRegular-fontWeight: bold;
   --overlineSmall-fontWeight: bold;
   --overlineRegular-lineHeight: 24px;
@@ -158,6 +158,8 @@ code {
     rgba(118, 126, 148, 0.58) 0%,
     rgba(118, 126, 148, 0) 85.77%
   );
+  /** Transition  */
+  --transition-style1: all ease 250ms;
 }
 
 /** Tags Default styling  */
