@@ -7,6 +7,7 @@ import {
   Compass,
   Trophy,
 } from "../../customIcons/icons";
+
 function Sidebar() {
   const [appGuideState, changeAppGuideState] = useState({
     activeTitle: "For You",
@@ -25,23 +26,20 @@ function Sidebar() {
       { title: "Downloads", type: "userGuideState" },
     ],
   });
-  function toggleAppGuideClassStyle(index) {
+  function toggleClassStyle(index, type) {
     if (
+      type === "appGuideState" &&
       appGuideState.guidSectionObject[index].title === appGuideState.activeTitle
     ) {
-      return "guid-section--entry active";
-    } else {
-      return "guid-section--entry";
-    }
-  }
-  function toggleUserGuideClassStyle(index) {
-    if (
+      return "guide-section--entry active active-appGuide";
+    } else if (
+      type === "userGuideState" &&
       appGuideState.userGuideSectionObject[index].title ===
-      appGuideState.activeTitle
+        appGuideState.activeTitle
     ) {
-      return "userGuide-section--entry active";
+      return "guide-section--entry active";
     } else {
-      return "userGuide-section--entry";
+      return "guide-section--entry";
     }
   }
   const activateLink = (index, type) => {
@@ -62,7 +60,7 @@ function Sidebar() {
           {appGuideState.guidSectionObject.map((element, index) => (
             <div
               key={index}
-              className={toggleAppGuideClassStyle(index)}
+              className={toggleClassStyle(index, element.type)}
               onClick={() => {
                 activateLink(index, element.type);
               }}
@@ -80,7 +78,7 @@ function Sidebar() {
             {appGuideState.userGuideSectionObject.map((element, index) => (
               <div
                 key={index}
-                className={toggleUserGuideClassStyle(index)}
+                className={toggleClassStyle(index, element.type)}
                 onClick={() => {
                   activateLink(index, element.type);
                 }}
@@ -88,6 +86,21 @@ function Sidebar() {
                 {element.title}
               </div>
             ))}
+          </div>
+          <div className="app__guide-section">
+            <div className="guide-section--title">My Friends</div>
+            <div className="guide-section--entry">
+              <div className="user__profile--imgWrapper">
+                <img src="" alt="" />
+              </div>
+              The Rock
+            </div>
+            <div className="guide-section--entry">
+              <div className="user__profile--imgWrapper">
+                <img src="" alt="" />
+              </div>
+              The Rock
+            </div>
           </div>
         </div>
       </div>

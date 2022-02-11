@@ -252,7 +252,7 @@ p {
   background: var(--cl-black-10);
   border: 1px solid var(--cl-white-10);
 }
-
+/** Button type - icon  */
 .btn__icon {
   padding: 12px;
   display: flex;
@@ -272,7 +272,19 @@ p {
 .btn__icon.active .fill-icon {
   fill: var(--color);
 }
-/** Button type - icon  */
+/** icon classes  */
+.icon-right .icon-wrapper {
+  margin-left: 4px;
+}
+.icon-left .icon-wrapper {
+  margin-right: 4px;
+}
+.icon-left.icon-right .icon-wrapper:first-child {
+  margin-right: 4px;
+}
+.icon-left.icon-right .icon-wrapper:last-child {
+  margin-left: 4px;
+}
 /* /----------------------------------------------------------------------------------------/ */
 
 /** Input fields Classes */
