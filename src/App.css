@@ -402,3 +402,14 @@ p {
 .overflow-scroll::-webkit-scrollbar-thumb:hover {
   background: var(--cl-grey-500);
 }
+.rich-render-container {
+  --render-richContent-marginLeft: ;
+  width: 100%;
+  min-height: 100vh;
+}
+.render-rich-wrapper {
+  margin-left: var(--render-richContent-marginLeft);
+  background: var(--cl-primary-800);
+  min-height: 100%;
+  overflow-x: hidden;
+}

@@ -5,28 +5,36 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home";
 function App() {
-  const [renderContentPositioning, changeRenderContentPositioning] = useState({
+  const [appContentPosition, changeAppContentPosition] = useState({
     masterHeaderHeight: 0,
     sidebarWidth: 0,
   });
   useEffect(() => {
     const masterheaderHeight = document.getElementById("header").clientHeight;
     const sidebarwidth = document.getElementById("sidebar").clientWidth;
-    changeRenderContentPositioning({
+    changeAppContentPosition({
       masterHeaderHeight: masterheaderHeight,
       sidebarWidth: sidebarwidth,
     });
   }, []);
+  const renderContentPositionLeft = `${appContentPosition.sidebarWidth}px`;
   return (
     <div className="App bg-primary">
       <Router>
         <Header />
         <Sidebar />
-        <Switch>
-          <Route path="/">
-            <Home contentPosition={renderContentPositioning} />
-          </Route>
-        </Switch>
+        <div
+          className="rich-render-container"
+          style={{
+            "--render-richContent-marginLeft": `${renderContentPositionLeft}`,
+          }}
+        >
+          <Switch>
+            <Route path="/">
+              <Home PositionLeft={renderContentPositionLeft} />
+            </Route>
+          </Switch>
+        </div>
       </Router>
     </div>
   );

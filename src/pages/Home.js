@@ -1,11 +1,10 @@
-function Home({ contentPosition }) {
-  const sidebarWidth = contentPosition.sidebarWidth;
+import Carousel from "../components/ImgSlider/Carousel";
+
+function Home() {
   return (
-    <div
-      className="render-rich-container"
-      style={{ marginLeft: `${sidebarWidth}px` }}
-    >
-      <h1>Home Component</h1>
+    <div className="render-rich-wrapper">
+      <h2>Home Component</h2>
+      <Carousel />
     </div>
   );
 }
