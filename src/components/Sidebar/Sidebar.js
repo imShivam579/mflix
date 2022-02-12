@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./sidebarStyle.css";
 import { Favourite, Compass, Trophy } from "../../customIcons/icons";
 
@@ -53,8 +53,8 @@ function Sidebar() {
             </div>
           ))}
         </div>
-        <div class="app__guide-scrollableSection ">
-          <div class="guide-scrollableSection-wrapper overflow-scroll">
+        <div className="app__guide-scrollableSection ">
+          <div className="guide-scrollableSection-wrapper overflow-scroll">
             <div className="app__guide-section">
               <div className="guide-section--title">
                 {appGuideState.userGuideSectionTitle}

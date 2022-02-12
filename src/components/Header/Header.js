@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   GuidBtn,
   BrandLogo,
@@ -8,14 +8,9 @@ import {
 } from "../../customIcons/icons";
 import "./headerStyle.css";
 function Header() {
-  const [masterHeaderHeight, setMasterHeaderHeight] = useState(0);
-  useEffect(() => {
-    const headerHeight = document.getElementById("header").clientHeight;
-    console.log("headerHeight", headerHeight);
-  }, []);
   return (
     <header id="header" className="master__header bg-primary">
-      <div class="master__header--wrapper">
+      <div className="master__header--wrapper">
         <div className="master__header--start">
           <button
             id="guideBtn"
